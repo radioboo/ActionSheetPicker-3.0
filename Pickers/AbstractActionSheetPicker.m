@@ -285,13 +285,13 @@ CG_INLINE BOOL isIPhone4() {
 }
 
 - (IBAction)actionPickerDone:(id)sender {
-    [self notifyTarget:self.target didSucceedWithAction:self.successAction origin:[self storedOrigin]];
     [self dismissPicker];
+    [self notifyTarget:self.target didSucceedWithAction:self.successAction origin:[self storedOrigin]];
 }
 
 - (IBAction)actionPickerCancel:(id)sender {
-    [self notifyTarget:self.target didCancelWithAction:self.cancelAction origin:[self storedOrigin]];
     [self dismissPicker];
+    [self notifyTarget:self.target didCancelWithAction:self.cancelAction origin:[self storedOrigin]];
 }
 
 - (void)dismissPicker {
